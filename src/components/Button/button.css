@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.storybook-button {
+.button {
   /* font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
   font-weight: 700;
   border: 0;
