@@ -1,6 +1,6 @@
 import { fn } from '@storybook/test';
 import { Button } from './Button';
-import Icons from '../Icons/Icons';
+// import { archive } from '../Icons/Icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -17,7 +17,7 @@ export default {
   //   backgroundColor: { control: 'color' },
   // },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
+  // args: { onClick: fn() },
 };
 
 // const downloadIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -25,49 +25,106 @@ export default {
 // </svg>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
+export const SolidPrimary = {
   args: {
-    variant: 'solid',
+    variant: 'solid-primary',
     size: 'md',
     label: 'Solid Button',
-    borderRadius: 'xs',
-    icon: 'right',
-    iconName: `${Icons.Archive}`,
-  },
-};
-
-export const solidInverted = {
-  args: {
-    variant: 'solid-inverted',
-    size: 'md',
-    label: 'Hello',
-    borderRadius: 'xs',
-    icon: 'none',
+    radius: 'xs',
     state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
   },
 };
 
-export const Secondary = {
+export const SolidSecondary = {
   args: {
-    variant: 'outline',
+    variant: 'solid-secondary',
     size: 'md',
-    label: 'Hello',
-    borderRadius: 'xs',
-    icon: 'none',
-    state: 'disabled',
+    label: 'Solid Inverted Button',
+    radius: 'xs',
+    state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
   },
 };
 
-export const Large = {
+export const NeutralPrimary = {
   args: {
-    size: 'lg',
-    label: 'Button',
+    variant: 'neutral-primary',
+    size: 'md',
+    label: 'Neutral Button',
+    radius: 'xs',
+    state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
   },
 };
 
-export const Small = {
+export const NeutralSecondary = {
   args: {
-    size: 'sm',
-    label: 'Button',
+    variant: 'neutral-secondary',
+    size: 'md',
+    label: 'Neutral Button',
+    radius: 'xs',
+    state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
+  },
+};
+
+export const OutlinePrimary = {
+  args: {
+    variant: 'outline-primary',
+    size: 'md',
+    label: 'Solid Button',
+    radius: 'xs',
+    state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
+  },
+};
+
+export const OutlineNeutral = {
+  args: {
+    variant: 'outline-neutral',
+    size: 'md',
+    label: 'Solid Button',
+    radius: 'xs',
+    state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
+  },
+};
+
+export const SolidDestructive = {
+  args: {
+    variant: 'solid-destructive',
+    size: 'md',
+    label: 'Delete',
+    radius: 'xs',
+    state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
+  },
+};
+
+export const OutlineDestructive = {
+  args: {
+    variant: 'outline-destructive',
+    size: 'md',
+    label: 'Delete',
+    radius: 'xs',
+    state: 'default',
+    onClick: () => {
+      alert('Hello from adroitUI!');
+    },
   },
 };

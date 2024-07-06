@@ -49,6 +49,20 @@ export default {
           11: 'rgba(0, 0, 0, 0.56)',
           12: 'rgba(0, 0, 0, 0.91)',
         },
+        error: {
+          1: '#fffcfc',
+          2: '#fff8f8',
+          3: '#ffefef',
+          4: '#ffe5e5',
+          5: '#fdd8d8',
+          6: '#f9c6c6',
+          7: '#f3aeaf',
+          8: '#eb9091',
+          9: '#e5484d',
+          10: '#dc3d43',
+          11: '#cd2b31',
+          12: '#381316',
+        }
       },
       borderRadius: {
         none: '0',
