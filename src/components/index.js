@@ -1,5 +1,4 @@
-import '../index.css';
-import { cn } from './utils';
+import './index.css';
 
 export { Button } from './Button/Button';
 
