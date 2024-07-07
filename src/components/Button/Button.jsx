@@ -58,7 +58,7 @@ export const Button = ({ variant, size, label, radius, state, className, ...prop
 
 Button.propTypes = {
   variant: PropTypes.oneOf(['solid-primary', 'solid-secondary', 'solid-destructive', 'outline-primary', 'outline-neutral', 'outline-destructive', 'neutral-primary', 'neutral-secondary']),
-  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl', '2xl']),
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl', '2xl']),
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   radius: PropTypes.oneOf(['none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', 'full']),
