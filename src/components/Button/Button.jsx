@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cn } from '../utils';
 import { cva } from "class-variance-authority"
+import '../index.css';
 
 const buttonVariants = cva("inline-flex items-center justify-center whitespace-nowrap rounded-xs text-sm gap-[10px] font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
