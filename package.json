@@ -19,12 +19,14 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postinstall": "node ./src/components/scripts/postinstall.js"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "execa": "^9.3.0",
     "lucide-react": "^0.400.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -32,7 +32,9 @@ To get started with Adroit UI, follow these steps:
 ```javascript 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/adroit-ui/dist/adroit-ui.js"
+  ],
   theme: {
     extend: {
       colors: {
@@ -140,6 +142,7 @@ export default {
   },
   plugins: [],
 };
+
 
 ```
 

@@ -72,7 +72,7 @@ Button.defaultProps = {
   label: 'Button',
   radius: 'xs',
   onClick: () => {
-    alert('Hello from adroitUI!');
+    alert('Hello from adroit UI :)');
   },
   state: 'default',
 
