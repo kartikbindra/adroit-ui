@@ -3,7 +3,9 @@
   "version": "0.0.9",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "src/components/scripts/postinstall.js",
+    "src/"
   ],
   "main": "dist/adroit-ui-umd.js",
   "module": "dist/adroit-ui.js",
