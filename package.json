@@ -20,7 +20,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "postinstall": "node ./src/components/scripts/postinstall.js"
+    "postinstall": "node src/components/scripts/postinstall.js"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
