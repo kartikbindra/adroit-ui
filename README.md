@@ -17,7 +17,8 @@ NPM Package: [adroit-ui](https://www.npmjs.com/package/adroit-ui)
 
 To get started with Adroit UI, follow these steps:
 
-1. **Install Adroit UI**: Add Adroit UI to your project via npm or yarn.
+1. ### **Install Adroit UI**: 
+    Add Adroit UI to your project via npm or yarn.
     ```bash
     npm install adroit-ui
     ```
@@ -26,125 +27,155 @@ To get started with Adroit UI, follow these steps:
     yarn add adroit-ui
     ```
 
-2. **Configure Tailwind CSS**: Ensure your Tailwind CSS configuration is set up to work with Adroit UI.
+2. ### **Configure Tailwind CSS**: 
+    Ensure your Tailwind CSS configuration is set up to work with Adroit UI.
+
+* If TailwindCSS is not configured inside your project, then follow the [docs](tailwindcss.com/docs/) here or follow the steps below.
+
+* ### Install Tailwind CSS
+  Install `tailwindcss` and its peer dependencies via npm, and create your `tailwind.config.js` file.
+
+  ```terminal
+  npm install -D tailwindcss postcss autoprefixer
+  npx tailwindcss init
+  ```
+
+* ### Add Tailwind to your PostCSS configuration
+  Add `tailwindcss` and `autoprefixer` to your `postcss.config.js` file, or wherever PostCSS is configured in your project.
+
+  ```postcss.config.js
+  module.exports = {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    }
+  }
+  ```
 
 * Replace all the content inside `tailwind.config.js` file with the content below:
-```javascript 
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/adroit-ui/dist/adroit-ui.js"
-  ],
-  theme: {
-    extend: {
-      colors: {
-        transparent: 'transparent',
-        black: '#000',
-        white: '#fff',
-        neutral: {
-          1: '#fcfcfc',
-          2: '#f8f8f8',
-          3: '#f3f3f3',
-          4: '#ededed',
-          5: '#e8e8e8',
-          6: '#e2e2e2',
-          7: '#dbdbdb',
-          8: '#c7c7c7',
-          9: '#8f8f8f',
-          10: '#858585',
-          11: '#6f6f6f',
-          12: '#202020',
+  ```javascript 
+  /** @type {import('tailwindcss').Config} */
+  export default {
+    content: ["./src/**/*.{js,jsx,ts,tsx}",
+      "./node_modules/adroit-ui/dist/adroit-ui.js"
+    ],
+    theme: {
+      extend: {
+        colors: {
+          transparent: 'transparent',
+          black: '#000',
+          white: '#fff',
+          neutral: {
+            1: '#fcfcfc',
+            2: '#f8f8f8',
+            3: '#f3f3f3',
+            4: '#ededed',
+            5: '#e8e8e8',
+            6: '#e2e2e2',
+            7: '#dbdbdb',
+            8: '#c7c7c7',
+            9: '#8f8f8f',
+            10: '#858585',
+            11: '#6f6f6f',
+            12: '#202020',
+          },
+          primary: {
+            1: '#fbfdff',
+            2: '#f5faff',
+            3: '#eaf6ff',
+            4: '#e1f0ff',
+            5: '#cee7fe',
+            6: '#b7d9f8',
+            7: '#96c7f2',
+            8: '#5eb0ef',
+            9: '#0091ff',
+            10: '#0081f1',
+            11: '#006adc',
+            12: '#00254d',
+          },
+          overlay: {
+            1: 'rgba(0, 0, 0, 0.01)',
+            2: 'rgba(0, 0, 0, 0.03)',
+            3: 'rgba(0, 0, 0, 0.05)',
+            4: 'rgba(0, 0, 0, 0.07)',
+            5: 'rgba(0, 0, 0, 0.09)',
+            6: 'rgba(0, 0, 0, 0.11)',
+            7: 'rgba(0, 0, 0, 0.14)',
+            8: 'rgba(0, 0, 0, 0.22)',
+            9: 'rgba(0, 0, 0, 0.44)',
+            10: 'rgba(0, 0, 0, 0.48)',
+            11: 'rgba(0, 0, 0, 0.56)',
+            12: 'rgba(0, 0, 0, 0.91)',
+          },
+          error: {
+            1: '#fffcfc',
+            2: '#fff8f8',
+            3: '#ffefef',
+            4: '#ffe5e5',
+            5: '#fdd8d8',
+            6: '#f9c6c6',
+            7: '#f3aeaf',
+            8: '#eb9091',
+            9: '#e5484d',
+            10: '#dc3d43',
+            11: '#cd2b31',
+            12: '#381316',
+          }
         },
-        primary: {
-          1: '#fbfdff',
-          2: '#f5faff',
-          3: '#eaf6ff',
-          4: '#e1f0ff',
-          5: '#cee7fe',
-          6: '#b7d9f8',
-          7: '#96c7f2',
-          8: '#5eb0ef',
-          9: '#0091ff',
-          10: '#0081f1',
-          11: '#006adc',
-          12: '#00254d',
+        borderRadius: {
+          none: '0',
+          xs: '4px',
+          sm: '8px',
+          DEFAULT: '0.25rem',
+          md: '16px',
+          lg: '24px',
+          xl: '32px',
+          '2xl': '48px',
+          full: '9999px',
         },
-        overlay: {
-          1: 'rgba(0, 0, 0, 0.01)',
-          2: 'rgba(0, 0, 0, 0.03)',
-          3: 'rgba(0, 0, 0, 0.05)',
-          4: 'rgba(0, 0, 0, 0.07)',
-          5: 'rgba(0, 0, 0, 0.09)',
-          6: 'rgba(0, 0, 0, 0.11)',
-          7: 'rgba(0, 0, 0, 0.14)',
-          8: 'rgba(0, 0, 0, 0.22)',
-          9: 'rgba(0, 0, 0, 0.44)',
-          10: 'rgba(0, 0, 0, 0.48)',
-          11: 'rgba(0, 0, 0, 0.56)',
-          12: 'rgba(0, 0, 0, 0.91)',
+        fontFamily: {
+          montserrat: ['Montserrat', 'sans-serif'],
         },
-        error: {
-          1: '#fffcfc',
-          2: '#fff8f8',
-          3: '#ffefef',
-          4: '#ffe5e5',
-          5: '#fdd8d8',
-          6: '#f9c6c6',
-          7: '#f3aeaf',
-          8: '#eb9091',
-          9: '#e5484d',
-          10: '#dc3d43',
-          11: '#cd2b31',
-          12: '#381316',
-        }
-      },
-      borderRadius: {
-        none: '0',
-        xs: '4px',
-        sm: '8px',
-        DEFAULT: '0.25rem',
-        md: '16px',
-        lg: '24px',
-        xl: '32px',
-        '2xl': '48px',
-        full: '9999px',
-      },
-      fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-      },
-      fontSize: {
-        xs: '12px',
-        sm: '14px',
-        md: '16px',
-        lg: '18px',
-        xl: '20px',
-        '2xl': '24px',
-        '3xl': '30px',
-        '4xl': '36px',
-        '5xl': '48px',
-        '6xl': '60px',
-        '7xl': '72px',
-      },
-      fontWeight:{
-        light: 300,
-        regular: 400,
-        medium: 500,
-        semibold: 600,
-        bold: 700,
-      },
-      blur: {
-        sm: '8px',
-        md: '16px',
-        lg: '24px',
-        xl: '40px',
-      },
-    }
-  },
-  plugins: [],
-};
+        fontSize: {
+          xs: '12px',
+          sm: '14px',
+          md: '16px',
+          lg: '18px',
+          xl: '20px',
+          '2xl': '24px',
+          '3xl': '30px',
+          '4xl': '36px',
+          '5xl': '48px',
+          '6xl': '60px',
+          '7xl': '72px',
+        },
+        fontWeight:{
+          light: 300,
+          regular: 400,
+          medium: 500,
+          semibold: 600,
+          bold: 700,
+        },
+        blur: {
+          sm: '8px',
+          md: '16px',
+          lg: '24px',
+          xl: '40px',
+        },
+      }
+    },
+    plugins: [],
+  };
+  ```
 
+* ### Add the Tailwind directives to your CSS
+  Add the `@tailwind` **directives** for each of Tailwind’s layers to your main CSS file.
 
-```
+  ```mian.css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  ```
 
 3. **Import Components**: Import the components you need and start using them in your project.
     ```javascript
