@@ -37,19 +37,7 @@ To get started with Adroit UI, follow these steps:
 
   ```terminal
   npm install -D tailwindcss postcss autoprefixer
-  npx tailwindcss init
-  ```
-
-* ### Add Tailwind to your PostCSS configuration
-  Add `tailwindcss` and `autoprefixer` to your `postcss.config.js` file, or wherever PostCSS is configured in your project.
-
-  ```postcss.config.js
-  module.exports = {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    }
-  }
+  npx tailwindcss init -p
   ```
 
 * Replace all the content inside `tailwind.config.js` file with the content below:
