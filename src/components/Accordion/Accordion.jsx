@@ -1,6 +1,6 @@
 import React from 'react'
-import { AccordionItem } from '../AccordionItem/accordionItem'
 import { cn } from '../utils'
+import PropTypes from 'prop-types'
 
 export const Accordion = ({ className, children, ...props }) => {
   return (
@@ -8,4 +8,5 @@ export const Accordion = ({ className, children, ...props }) => {
       {children}
     </div>
   )
-}
+};
+

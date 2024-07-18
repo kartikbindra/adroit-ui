@@ -3,4 +3,6 @@ import './index.css';
 export { Button } from './Button/Button';
 export { Accordion } from './Accordion/Accordion';
 export { AccordionItem } from './AccordionItem/accordionItem';
+export { Alert } from './Alert/Alert';
+export { Badge } from './Badge/Badge';
 

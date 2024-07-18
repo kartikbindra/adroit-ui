@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { cn } from "../utils";
+import PropTypes from "prop-types";
 
-export const AccordionItem = ({ title, description }) => {
+export const AccordionItem = ({ title, description, className, ...props }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="py-[24px] px-[16px]">
+    <div className={cn("py-[24px] px-[16px]", className)} {...props}>
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex justify-between w-full font-semibold"
@@ -48,4 +50,14 @@ export const AccordionItem = ({ title, description }) => {
       </div>
     </div>
   );
+};
+
+AccordionItem.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
+
+AccordionItem.defaultProps = {
+  title: "Accordion Item Title",
+  description: "Accordion Item Description",
 };
