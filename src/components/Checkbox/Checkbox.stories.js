@@ -1,12 +1,12 @@
 import { fn } from '@storybook/test';
 // import { Button } from './Button';
-import { Alert } from './Alert';
+import { Checkbox } from './Checkbox';
 // import { archive } from '../Icons/Icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Alert',
-  component: Alert,
+  title: 'Example/Checkbox',
+  component: Checkbox,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -26,34 +26,11 @@ export default {
 // </svg>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const AlertInfo = {
+export const CheckboxStandard = {
   args: {
-    type: 'info',
-    title: 'Alert-Title',
-    description: 'Alert-Description',
-  },
-};
-
-export const AlertSuccess = {
-  args: {
-    type: 'success',
-    title: 'Alert-Title',
-    description: 'Alert-Description',
-  },
-};
-
-export const AlertWarning = {
-  args: {
-    type: 'warning',
-    title: 'Alert-Title',
-    description: 'Alert-Description',
-  },
-};
-
-export const AlertError = {
-  args: {
-    type: 'error',
-    title: 'Alert-Title',
-    description: 'Alert-Description',
+    size: 'sm',
+    label: 'Checkbox',
+    Disabled: false,
+    variant: 'default',
   },
 };
