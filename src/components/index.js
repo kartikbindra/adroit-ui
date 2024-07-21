@@ -1,4 +1,6 @@
 import './index.css';
+import './Checkbox/Checkbox.css';
+import './Radio/Radio.css';
 
 export { Button } from './Button/Button';
 export { Accordion } from './Accordion/Accordion';
