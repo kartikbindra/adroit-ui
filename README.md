@@ -185,9 +185,10 @@ To get started with Adroit UI, follow these steps:
   ```
 
 * ### Add the Tailwind directives to your CSS
-  Add the `@tailwind` **directives** for each of Tailwind’s layers to your main CSS file.
+  Add the `@tailwind` **directives** for each of Tailwind’s layers and adroitUI's import to your main CSS file.
 
   ```mian.css
+  @import "../node_modules/adroit-ui/dist/style.css";
   @tailwind base;
   @tailwind components;
   @tailwind utilities;

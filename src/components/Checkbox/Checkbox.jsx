@@ -27,7 +27,9 @@ export const Checkbox = ({ variant, Disabled, size, label, className, ...props }
     <div
       className={cn( checkBoxVariants({ size }), className, "checkbox-wrapper-1")} {...props}
     >
-        <input className={`substituted ${variant == 'primary' ? 'primary' : variant == 'warning' ? 'warning' : variant == 'error' ? 'error' : variant == 'success' ? 'success' : '' }`} type="checkbox" id='checkbox' disabled={Disabled}/>
+        <input 
+        className={`substituted ${variant == 'primary' ? 'primary' : variant == 'warning' ? 'warning' : variant == 'error' ? 'error' : variant == 'success' ? 'success' : '' }`}
+         type="checkbox" id='checkbox' disabled={Disabled}/>
         <label htmlFor='checkbox' className={`text-${size} font-medium`}>{label}</label>
     </div>
   );
