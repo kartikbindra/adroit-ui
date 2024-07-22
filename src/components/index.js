@@ -9,4 +9,5 @@ export { Alert } from './Alert/Alert';
 export { Badge } from './Badge/Badge';
 export { Checkbox } from './Checkbox/Checkbox';
 export { Radio } from './Radio/Radio';
+export { Input } from './Input/Input';
 

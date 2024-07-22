@@ -32,5 +32,7 @@ export const InputStandard = {
     helpText: 'This is a help text',
     state: 'default',
     required: true,
+    placeholder: 'you@email.com',
+    type: 'email'
   },
 };

@@ -21,11 +21,11 @@ const inputVariants = cva("",
   }
 )
 
-export const Input = ({ required, size, label, helpText, state, className, ...props }) => {
+export const Input = ({ required, size, label, helpText, placeholder, state, className, ...props }) => {
 return (
     <div className={"my-4 mx-auto max-w-xs"}>
         <label className={cn("mb-1 block text-sm font-medium", state === 'disabled' ? "text-neutral-9" : "text-neutral-12", inputVariants({ state }), required ? "after:ml-0.5 after:text-error-9 after:content-['*']" : '', size === 'md' ? "text-md" : size === 'lg' ? "text-lg" : "")} htmlFor="input" >{label}</label>
-        <input type="email" id="input" className={cn("px-2 py-1 block text-sm font-medium w-full rounded-xs border border-overlay-6 bg-neutral-1 hover:border-primary-9 ring-offset-background focus:border focus:outline-none focus:border-primary-9 active:border-primary-9 focus:ring focus:ring-primary-6 focus:ring-offset-0 disabled:cursor-not-allowed disabled:bg-neutral-3 disabled:cursor-not-allowed disabled:hover:border-overlay-6", inputVariants({ size, state }) )} placeholder="you@email.com" disabled={state === 'disabled'} />
+        <input id="input" className={cn("px-2 py-1 block text-sm font-medium w-full rounded-xs border border-overlay-6 bg-neutral-1 hover:border-primary-9 ring-offset-background focus:border focus:outline-none focus:border-primary-9 active:border-primary-9 focus:ring focus:ring-primary-6 focus:ring-offset-0 disabled:cursor-not-allowed disabled:bg-neutral-3 disabled:cursor-not-allowed disabled:hover:border-overlay-6", inputVariants({ size, state }) )} placeholder={placeholder} disabled={state === 'disabled'} {...props}/>
         <p className={cn("mt-1 text-sm text-neutral-9", state === 'error' ? "text-error-9" : '', size === 'md' ? "text-md" : size === 'lg' ? "text-lg" : "")}>{helpText}</p>
     </div>
 );
@@ -37,6 +37,8 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   helpText: PropTypes.string.isRequired,
   state: PropTypes.oneOf(['default', 'disabled', 'error']),
+    className: PropTypes.string,
+    placeholder: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -45,5 +47,6 @@ Input.defaultProps = {
   helpText: 'This is a help text',
   state: 'default',
   required: false,
+  placeholder: 'input',
 
 };
