@@ -1,11 +1,11 @@
 import { fn } from '@storybook/test';
-import { Input } from './Input';
+import { Textarea } from './Textarea';
 // import { archive } from '../Icons/Icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Input',
-  component: Input,
+  title: 'Example/Textarea',
+  component: Textarea,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -25,15 +25,15 @@ export default {
 // </svg>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const InputStandard = {
+export const TextareaStandard = {
   args: {
-    id: 'input',
+    id: 'textarea',
     size: 'md',
     label: 'Label',
     helpText: 'This is a help text',
     state: 'default',
     required: true,
-    placeholder: 'you@email.com',
+    placeholder: 'your text goes here',
     type: 'email'
   },
 };

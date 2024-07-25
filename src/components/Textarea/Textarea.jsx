@@ -4,7 +4,7 @@ import { cn } from '../utils';
 import { cva } from "class-variance-authority"
 import '../index.css';
 
-const inputVariants = cva("",
+const textareaVariants = cva("",
   {
     variants: {
       state: {
@@ -21,17 +21,17 @@ const inputVariants = cva("",
   }
 )
 
-export const Input = ({ id, required, size, label, helpText, placeholder, state, className, ...props }) => {
+export const Textarea = ({ id, required, size, label, helpText, placeholder, state, className, ...props }) => {
 return (
     <div className={"my-4 mx-auto w-full"}>
-        <label className={cn("mb-1 block text-sm font-medium", state === 'disabled' ? "text-neutral-9" : "text-neutral-12", inputVariants({ state }), required ? "after:ml-0.5 after:text-error-9 after:content-['*']" : '', size === 'md' ? "text-md" : size === 'lg' ? "text-lg" : "")} htmlFor={id} >{label}</label>
-        <input id={id} className={cn("px-2 py-1 block text-sm font-medium w-full rounded-xs border border-2 border-overlay-6 bg-neutral-1 hover:border-primary-9 ring-offset-background focus:border-2 focus:outline-none focus:border-primary-9 active:border-primary-9 focus:ring focus:ring-primary-6 focus:ring-offset-0 disabled:cursor-not-allowed disabled:bg-neutral-3 disabled:cursor-not-allowed disabled:hover:border-overlay-6", inputVariants({ size, state }) )} placeholder={placeholder} disabled={state === 'disabled'} {...props}/>
+        <label className={cn("mb-1 block text-sm font-medium", state === 'disabled' ? "text-neutral-9" : "text-neutral-12", textareaVariants({ state }), required ? "after:ml-0.5 after:text-error-9 after:content-['*']" : '', size === 'md' ? "text-md" : size === 'lg' ? "text-lg" : "")} htmlFor={id} >{label}</label>
+        <textarea id={id} rows='5' className={cn("px-2 py-1 block text-sm font-medium w-full rounded-xs border border-2 border-overlay-6 bg-neutral-1 hover:border-primary-9 ring-offset-background focus:border focus:outline-none focus:border-primary-9 active:border-primary-9 focus:ring focus:ring-primary-6 focus:ring-offset-0 disabled:cursor-not-allowed disabled:bg-neutral-3 disabled:cursor-not-allowed disabled:hover:border-overlay-6", textareaVariants({ size, state }) )} placeholder={placeholder} disabled={state === 'disabled'} {...props}/>
         <p className={cn("mt-1 text-sm text-neutral-9", state === 'error' ? "text-error-9" : '', size === 'md' ? "text-md" : size === 'lg' ? "text-lg" : "")}>{helpText}</p>
     </div>
 );
 };
 
-Input.propTypes = {
+Textarea.propTypes = {
     required: PropTypes.bool,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   label: PropTypes.string,
@@ -42,13 +42,13 @@ Input.propTypes = {
     id: PropTypes.string.isRequired,
 };
 
-Input.defaultProps = {
-    id: 'input',
+Textarea.defaultProps = {
+    id: 'textarea',
   size: 'md',
   label: '',
   helpText: '',
   state: 'default',
   required: false,
-  placeholder: 'input',
+  placeholder: 'your text goes here',
 
 };
