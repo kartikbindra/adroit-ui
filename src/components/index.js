@@ -11,4 +11,5 @@ export { Checkbox } from './Checkbox/Checkbox';
 export { Radio } from './Radio/Radio';
 export { Input } from './Input/Input';
 export { Textarea } from './Textarea/Textarea';
+export { Switch } from './Switch/Switch';
 
