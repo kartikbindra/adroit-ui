@@ -12,4 +12,5 @@ export { Radio } from './Radio/Radio';
 export { Input } from './Input/Input';
 export { Textarea } from './Textarea/Textarea';
 export { Switch } from './Switch/Switch';
+export { FileInput } from './FileInput/FileInput';
 
