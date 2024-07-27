@@ -1,11 +1,11 @@
 import { fn } from '@storybook/test';
-import { Input } from './Input';
+import { FileInput } from './FileInput';
 // import { archive } from '../Icons/Icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Input',
-  component: Input,
+  title: 'Example/FileInput',
+  component: FileInput,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -25,63 +25,44 @@ export default {
 // </svg>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Email = {
+export const UploadFile = {
   args: {
-    id: 'input',
+    id: 'file',
     size: 'md',
-    label: 'Label',
-    helpText: 'This is a help text',
-    state: 'default',
-    required: true,
-    placeholder: 'you@email.com',
-    type: 'email'
+    label: 'Upload file',
+    helpText: 'Upload your files here',
+    Required: false,
+    helpTextType: 'default',
   },
 };
-export const Text = {
+export const UploadFileRequired = {
   args: {
-    id: 'input',
+    id: 'file',
     size: 'md',
-    label: 'Label',
-    helpText: 'This is a help text',
-    state: 'default',
-    required: true,
-    placeholder: 'enter text',
-    type: 'text'
+    label: 'Upload file',
+    helpText: 'Upload your files here',
+    Required: true,
+    helpTextType: 'default',
   },
 };
-export const Number = {
+export const UploadFileError = {
   args: {
-    id: 'input',
+    id: 'file',
     size: 'md',
-    label: 'Label',
-    helpText: 'This is a help text',
-    state: 'default',
-    required: true,
-    placeholder: '1',
-    type: 'number'
+    label: 'Upload file',
+    helpText: 'Upload your files here',
+    Required: false,
+    helpTextType: 'error',
   },
 };
-export const Tel = {
+export const UploadFileDisabled = {
   args: {
-    id: 'input',
+    id: 'file',
     size: 'md',
-    label: 'Label',
-    helpText: 'This is a help text',
-    state: 'default',
-    required: true,
-    placeholder: '+91 9999999999',
-    type: 'tel'
-  },
-};
-export const Url = {
-  args: {
-    id: 'input',
-    size: 'md',
-    label: 'Label',
-    helpText: 'This is a help text',
-    state: 'default',
-    required: true,
-    placeholder: 'www.example.com',
-    type: 'url'
+    label: 'Upload file',
+    helpText: 'Upload your files here',
+    Required: true,
+    helpTextType: 'default',
+    Disabled: true,
   },
 };
