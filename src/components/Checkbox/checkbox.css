@@ -8,7 +8,7 @@
     margin: 0;
     width: 0;
     height: 0;
-    display: inline;
+    display: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -24,11 +24,11 @@
     content: "";
     display: inline-block;
     vertical-align: top;
-    height: 1.15em;
-    width: 1.15em;
+    height: 1.2em;
+    width: 1.2em;
     margin-right: 0.6em;
     color: rgba(0, 0, 0, 0.275);
-    border: solid  1px;
+    border: solid 1px;
     border-color: var(--overlay-6);
     border-radius: 4px;
     background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>') no-repeat center, white;
