@@ -13,4 +13,6 @@ export { Input } from './Input/Input';
 export { Textarea } from './Textarea/Textarea';
 export { Switch } from './Switch/Switch';
 export { FileInput } from './FileInput/FileInput';
+export { Select } from './Select/Select';
+export { Option } from './Option/Option';
 
