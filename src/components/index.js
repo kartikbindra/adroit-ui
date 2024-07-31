@@ -15,4 +15,5 @@ export { Switch } from './Switch/Switch';
 export { FileInput } from './FileInput/FileInput';
 export { Select } from './Select/Select';
 export { Option } from './Option/Option';
+export { Avatar } from './Avatar/Avatar';
 

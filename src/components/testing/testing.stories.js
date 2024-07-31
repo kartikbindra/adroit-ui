@@ -1,11 +1,11 @@
 import { fn } from '@storybook/test';
-import { Avatar } from './Avatar';
+import { testing } from './testing';
 // import { archive } from '../Icons/Icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Avatar',
-  component: Avatar,
+  title: 'Example/testing',
+  component: testing,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -25,32 +25,8 @@ export default {
 // </svg>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const AvatarStandard = {
+export const Testinggg = {
   args: {
-    size: 'xl',
-    fallback: "AB",
-    src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    shape: 'circle',
-  },
-};
-export const AvatarSquare = {
-  args: {
-    size: 'xl',
-    fallback: "AB",
-    src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    shape: 'square',
-  },
-};
-export const AvatarFallback = {
-  args: {
-    size: 'xl',
-    fallback: "AB",
-    shape: 'square',
-  },
-};
-export const DefaultFallback = {
-  args: {
-    size: 'xl',
-    shape: 'square',
+    
   },
 };
