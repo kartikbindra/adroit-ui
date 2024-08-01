@@ -16,4 +16,5 @@ export { FileInput } from './FileInput/FileInput';
 export { Select } from './Select/Select';
 export { Option } from './Option/Option';
 export { Avatar } from './Avatar/Avatar';
+export { Progress } from './Progress/Progress';
 
