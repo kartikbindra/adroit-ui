@@ -35,7 +35,7 @@ export const Slider = ({ size, label, helpText, valueLabel, Disabled, variant, m
   
   const percentage = ((value - min) / (max - min)) * 100;
   return (
-    <div className="w-[800px]">
+    <div className="w-full">
       <div className='flex justify-between items-center'>
         <div className={`text-${size} font-medium text-neutral-12 mb-1`}>{label}</div>
         {valueLabel && <div className={`text-${size} text-neutral-11 mb-1`}>{value}</div>}
@@ -132,13 +132,12 @@ Slider.propTypes = {
 };
 
 Slider.defaultProps = {
-  size: "lg",
+  size: "md",
   variant: "primary",
   min: 0,
   max: 100,
   step: 1,
   defaultValue: 50,
-  label: "Label",
-  helpText: "Help text",
-  valueLabel: true,
+  Disabled: false,
+  valueLabel: false,
 };

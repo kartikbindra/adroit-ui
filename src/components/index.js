@@ -18,4 +18,5 @@ export { Option } from './Option/Option';
 export { Avatar } from './Avatar/Avatar';
 export { Progress } from './Progress/Progress';
 export { Slider } from './Slider/Slider';
+export { Tooltip } from './Tooltip/Tooltip';
 
