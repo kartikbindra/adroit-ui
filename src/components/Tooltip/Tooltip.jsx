@@ -6,20 +6,25 @@ import { cva } from "class-variance-authority";
 
 export const Tooltip = ({ content, position, delay, ...props}) => {
   const [visible, setVisible] = useState(false);
+  const [hidden, setHidden] = useState(true);
   const timeoutRef = useRef(null);
 
   const showTooltip = () => {
     timeoutRef.current = setTimeout(() => {
       setVisible(true);
+      setHidden(false);
     }, delay);
 };
   const hideTooltip = () => {
     clearTimeout(timeoutRef.current);
-    setVisible(false)
+    setVisible(false);
+    setTimeout(() => {
+      setHidden(true);
+    }, 300);
 };
 
   const tooltipPosition = cva(
-    "absolute z-10 px-4 py-2 text-sm text-neutral-1 bg-neutral-12 border border-neutral-11 border-opacity-50 rounded-sm shadow-md transition-opacity duration-300 ease-out",
+    "absolute z-10 px-4 py-2 text-sm text-neutral-1 bg-neutral-12 border border-neutral-11 border-opacity-50 rounded-sm shadow-md transition-opacity duration-300 ease-out entering:fade-in",
     {
         variants: {
             position: {
@@ -36,7 +41,7 @@ export const Tooltip = ({ content, position, delay, ...props}) => {
   );
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" {...props}>
       <div
         onMouseEnter={showTooltip}
         onMouseLeave={hideTooltip}
@@ -44,7 +49,7 @@ export const Tooltip = ({ content, position, delay, ...props}) => {
       >
         {props.children}
       </div>
-        <div className={cn(tooltipPosition({ position }), visible ? 'opacity-100' : 'opacity-0')}>
+        <div className={cn(tooltipPosition({ position }), visible ? 'opacity-100' : 'opacity-0', hidden ? "hidden" : "")}>
           {content}
         </div>
       
