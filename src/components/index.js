@@ -19,4 +19,6 @@ export { Avatar } from './Avatar/Avatar';
 export { Progress } from './Progress/Progress';
 export { Slider } from './Slider/Slider';
 export { Tooltip } from './Tooltip/Tooltip';
+export { BreadCrumb } from './Breadcrumb/Breadcrumb';
+export { BreadcrumbItem } from './BreadcrumbItem/BreadcrumbItem';
 
