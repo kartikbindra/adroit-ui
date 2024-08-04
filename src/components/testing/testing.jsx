@@ -1,18 +1,20 @@
 import React from 'react'
 import { Breadcrumb } from '../Breadcrumb/Breadcrumb';
 import { BreadcrumbItem } from '../BreadcrumbItem/BreadcrumbItem';
-import { ChevronRight } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import { DropdownItem } from '../DropdownItem/DropdownItem';
+import { DropdownMenu } from '../Menu/Menu';
+import { Dropdown } from '../Dropdown/Dropdown';
 
 export const testing = () => {
   return (
-    <div className='rounded-full ring-2 ring-white object-cover flex -space-x-2 w-[500px]'>
-      <Breadcrumb>
-        <BreadcrumbItem> Home</BreadcrumbItem>
-        <BreadcrumbItem >Library</BreadcrumbItem>
-        <BreadcrumbItem >Components</BreadcrumbItem>
-        <BreadcrumbItem >Breadcrumb</BreadcrumbItem>
-      </Breadcrumb>
-    </div>
+    <Dropdown className=''>
+      <DropdownMenu position={'bottom-left'}>
+        <DropdownItem label='Item 1' href={'https://quantamind.dev'}/>
+        <DropdownItem label='Item 2' />
+        <DropdownItem label='Item 3' />
+      </DropdownMenu>
+    </Dropdown>
   )
 }
 
