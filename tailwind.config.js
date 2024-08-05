@@ -132,6 +132,15 @@ export default {
         lg: '24px',
         xl: '40px',
       },
+      keyframes: {
+        dropdown: {
+          '0%': { transform: 'scaleY(0)', opacity: 0 },
+          '100%': { transform: 'scaleY(1)', opacity: 1 },
+        },
+      },
+      animation: {
+        dropdown: 'dropdown 0.18s ease-in-out',
+      },
     }
   },
   plugins: [

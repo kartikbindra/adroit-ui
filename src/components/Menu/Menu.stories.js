@@ -1,11 +1,11 @@
 import { fn } from '@storybook/test';
-import { Menu } from './Menu';
+import { DropdownMenu } from './Menu';
 // import { archive } from '../Icons/Icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Menu',
-  component: Menu,
+  title: 'Example/DropdownMenu',
+  component: DropdownMenu,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
