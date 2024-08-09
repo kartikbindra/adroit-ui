@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export const DropdownItem = ({label, href, className, ...props}) => {
   return (
-    <a href={href || '#'} className={cn('font-medium text-sm py-2 px-3 hover:bg-neutral-3 hover:text-neutral-12 rounded-sm my-0 w-full', className)} {...props}>
+    <a href={href || '#'} className={cn('font-medium text-sm py-2 px-3 hover:bg-neutral-3 hover:text-neutral-12 rounded-sm my-0 w-full flex', className)} {...props}>
       {label}
     </a>
   )

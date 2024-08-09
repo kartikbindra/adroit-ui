@@ -20,10 +20,15 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_a5fd27e8935f84a"
+    "chromatic": "npx chromatic --project-token=chpt_a5fd27e8935f84a",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "@mdx-js/mdx": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
     "@svgr/cli": "^8.1.0",
     "@tailwindcss/forms": "^0.5.7",
     "class-variance-authority": "^0.7.0",
@@ -60,6 +65,7 @@
     "prop-types": "^15.8.1",
     "storybook": "^8.1.11",
     "tailwindcss": "^3.4.4",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vitepress": "^1.3.2"
   }
 }

@@ -11,9 +11,9 @@ const buttonVariants = cva("inline-flex items-center justify-center whitespace-n
         "solid-primary": "bg-primary-9 text-neutral-2 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-primary-10 disabled:bg-neutral-7 disabled:text-neutral-2 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed",
         "solid-secondary": "bg-neutral-2 text-primary-9 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-neutral-4 disabled:bg-neutral-7 disabled:text-neutral-2 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed",
         "solid-destructive": "bg-error-9 text-error-1 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-error-10 disabled:bg-neutral-7 disabled:text-neutral-2 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed",
-        "outline-primary": "border-2 border-primary-9 bg-none text-primary-9 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-primary-3 disabled:bg-neutral-1 disabled:text-neutral-7 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:border-neutral-7",
-        "outline-neutral": "border-2 border-neutral-12 bg-none text-neutral-12 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-neutral-3 disabled:bg-neutral-1 disabled:text-neutral-7 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:border-neutral-7",
-        "outline-destructive": "bg-error-1 text-error-9 border-2 border-error-9 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-error-3 disabled:bg-neutral-1 disabled:text-neutral-7 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:border-neutral-7",
+        "outline-primary": "border border-primary-6 bg-none text-primary-9 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-primary-3 disabled:bg-neutral-1 disabled:text-neutral-7 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:border-neutral-7",
+        "outline-neutral": "border border-neutral-6 bg-none text-neutral-12 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-neutral-3 disabled:bg-neutral-1 disabled:text-neutral-7 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:border-neutral-7",
+        "outline-destructive": "bg-error-1 text-error-9 border border-error-6 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-error-3 disabled:bg-neutral-1 disabled:text-neutral-7 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:border-neutral-7",
         "neutral-primary": "bg-neutral-12 text-neutral-2 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-neutral-11 disabled:bg-neutral-7 disabled:text-neutral-2 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed",
         "neutral-secondary": "bg-neutral-2 text-neutral-12 focus:ring-2 focus:ring-overlay-6 focus:ring-offset-background hover:bg-neutral-4 disabled:bg-neutral-7 disabled:text-neutral-2 disabled:pointer-events-auto disabled:opacity-50 disabled:cursor-not-allowed",
       },
@@ -71,9 +71,7 @@ Button.defaultProps = {
   size: 'md',
   label: 'Button',
   radius: 'xs',
-  onClick: () => {
-    alert('Hello from adroit UI :)');
-  },
+  onClick: () => {},
   state: 'default',
 
 };
