@@ -24,5 +24,5 @@ export { BreadcrumbItem } from './BreadcrumbItem/BreadcrumbItem';
 export { Dropdown } from './Dropdown/Dropdown';
 export { DropdownItem } from './DropdownItem/DropdownItem';
 export { DropdownMenu } from './Menu/Menu';
-export { Modal } from './Modal/Modal';
+export { default as Modal } from './Modal/Modal';
 
