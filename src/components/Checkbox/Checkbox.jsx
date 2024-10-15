@@ -21,21 +21,25 @@ const checkBoxVariants = cva("inline-flex items-center rounded-full font-medium 
   }
 )
 
-export const Checkbox = ({ variant, Disabled, size, label, className, ...props }) => {
+export const Checkbox = ({ id, variant, Disabled, size, label, className, ...props }) => {
+
+  const checkboxId = id || 'checkbox';
 
   return (
     <div
-      className={cn( checkBoxVariants({ size }), className, "checkbox-wrapper-1")} {...props}
+      className={cn(checkBoxVariants({ size }), className, "checkbox-wrapper-1")} {...props}
     >
-        <input 
-        className={`substituted ${variant == 'primary' ? 'primary' : variant == 'warning' ? 'warning' : variant == 'error' ? 'error' : variant == 'success' ? 'success' : '' }`}
-         type="checkbox" id='checkbox' disabled={Disabled}/>
-        <label htmlFor='checkbox' className={`text-${size} font-medium`}>{label}</label>
+      <input 
+        className={`substituted ${variant === 'primary' ? 'primary' : variant === 'warning' ? 'warning' : variant === 'error' ? 'error' : variant === 'success' ? 'success' : ''}`}
+        type="checkbox" id={checkboxId} disabled={Disabled}
+      />
+      <label htmlFor={checkboxId} className={`text-${size} font-medium`}>{label}</label>
     </div>
   );
 };
 
 Checkbox.propTypes = {
+    id : PropTypes.string,
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
     label: PropTypes.string,
     className: PropTypes.string,
@@ -44,6 +48,7 @@ Checkbox.propTypes = {
 };
 
 Checkbox.defaultProps = {
+    id: 'checkbox',
     size: 'sm',
     label: 'Checkbox',
     Disabled: false,
